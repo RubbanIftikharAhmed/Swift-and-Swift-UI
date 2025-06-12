@@ -1,19 +1,25 @@
 //
 //  ContentView.swift
-//  SwiftfulThinkingBootcamp
+//  UIBootcampSwift
 //
-//  Created by Rubban Iftikhar on 08/04/2024.
+//  Created by Rubban Iftikhar on 18/06/2024.
 //
 
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Text("Hello, world!")
-                .padding()
+        ZStack{
+            //component
+            Text("Hello World")
+            //.modifier
+                .font(.title)
+                .fontWeight(.medium)
+        //this is not recommended
+//                .font(.system(size: 30, weight: .bold, design: .serif))
+            
         }
-        
+            
     }
 }
 

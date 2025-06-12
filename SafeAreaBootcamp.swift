@@ -1,37 +1,35 @@
 //
 //  SafeAreaBootcamp.swift
-//  SwiftfulThinkingBootcamp
+//  UIBootcampSwift
 //
-//  Created by Rubban Iftikhar on 15/04/2024.
+//  Created by Rubban Iftikhar on 26/06/2024.
 //
 
 import SwiftUI
 
 struct SafeAreaBootcamp: View {
     var body: some View {
-//        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-//            .frame(maxWidth: .infinity, maxHeight: .infinity)
-//            .background(Color.red)
-        
-        ScrollView{
-            VStack {
-                Text("This is the title")
-                    .font(.title)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.leading, 10)
-                
-                
-                ForEach(0..<10){ Index in
-                    RoundedRectangle(cornerRadius: 20)
-                        .fill(Color.white)
-                        .frame(maxWidth: .infinity)
-                        .frame(height: 150)
-                        .padding(.vertical, 20)
-                        .shadow(radius: 10)
+        ZStack{
+            //background
+            ScrollView {
+                VStack{
+                    Text("Title goes here")
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.leading, 20)
+                    ForEach(0..<10) { index in
+                        RoundedRectangle(cornerRadius: 25)
+                            .fill(Color.white)
+                            .frame(height: 150)
+                            .shadow(radius: 20)
+                            .padding(20)
+                    }
                 }
             }
-            
         }
+        .background(
+            Color.blue
+                .ignoresSafeArea(edges: .all)
+        )
     }
 }
 
